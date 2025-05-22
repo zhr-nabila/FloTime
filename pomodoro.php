@@ -105,7 +105,6 @@ $email = $_SESSION['email'];
                     
                     <!-- Music Albums -->
                     <div class="music-albums">
-                        <!-- Lofi Album -->
                         <div class="album active" data-album="lofi">
                             <div class="album-cover" style="background-image: url('assets/2f059865-087c-4166-b2cd-a1acb10fd83f.jpg')">
                                 <div class="album-overlay">
@@ -118,7 +117,6 @@ $email = $_SESSION['email'];
                             </div>
                         </div>
                         
-                        <!-- Nature Sounds -->
                         <div class="album" data-album="study">
                             <div class="album-cover" style="background-image: url('assets/f48bedeb-1b55-4b4b-93a5-074935d8a4e7.jpg')">
                                 <div class="album-overlay">
@@ -131,7 +129,6 @@ $email = $_SESSION['email'];
                             </div>
                         </div>
                         
-                        <!-- Classical -->
                         <div class="album" data-album="focus">
                             <div class="album-cover" style="background-image: url('assets/0169afb0-39d8-486b-94e7-1f0b1ac82fad.jpg')">
                                 <div class="album-overlay">
@@ -144,7 +141,6 @@ $email = $_SESSION['email'];
                             </div>
                         </div>
                         
-                        <!-- White Noise -->
                         <div class="album" data-album="calm">
                             <div class="album-cover" style="background-image: url('assets/93a35d2e-af74-426f-aa34-c8af9eb4ec31.jpg')">
                                 <div class="album-overlay">
@@ -165,7 +161,6 @@ $email = $_SESSION['email'];
         </div>
     </div>
 
-    <!-- Audio for timer completion -->
     <audio id="timerSound" src="music/good-6081.mp3" preload="auto"></audio>
 
     <script src="js/pomodoro.js"></script>
