@@ -1,0 +1,97 @@
+body {
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+.container-fluid {
+    min-height: 100vh;
+}
+
+.content {
+    flex-grow: 1;
+    background: linear-gradient(145deg, #ffffff, #f1f1f1);
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    border: none;
+}
+
+.form-profile {
+    max-width: 550px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.75);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.form-label {
+    font-weight: 600;
+    color: #444;
+}
+
+input.form-control[type="text"],
+input.form-control[type="email"],
+input.form-control[type="file"] {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
+    color: #333;
+    font-weight: 500;
+    border-radius: 10px;
+    padding: 10px 14px;
+    transition: all 0.3s ease-in-out;
+}
+
+input.form-control:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 0 0.2rem rgba(108, 99, 255, 0.25);
+    background: rgba(255, 255, 255, 0.4);
+    color: #000;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #6c63ff, #574b90);
+    border: none;
+    padding: 10px 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: 0.3s ease;
+    box-shadow: 0 5px 15px rgba(108, 99, 255, 0.3);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #574b90, #6c63ff);
+    box-shadow: 0 7px 20px rgba(108, 99, 255, 0.5);
+}
+
+.photo-user {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    border: 3px solid #fff;
+}
+
+.user-avatar-lg {
+    width: 100px;
+    height: 100px;
+    background-color: #6c63ff;
+    color: #fff;
+    font-size: 36px;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.form-check-label {
+    font-weight: 500;
+    color: #555;
+}

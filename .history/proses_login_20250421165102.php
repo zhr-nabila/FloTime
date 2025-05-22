@@ -1,0 +1,27 @@
+<?php
+session_start();
+include "koneksi.php";
+
+// Ambil data dari form
+$email = $_POST['email'];
+$password = $_POST['password'];
+
+// Cek ke database
+$query = "SELECT * FROM users WHERE email = '$email' AND password = '$password'";
+$result = mysqli_query($conn, $query);
+$data = mysqli_fetch_assoc($result);
+
+if(mysqli_num_rows($result) > 0){
+    $_SESSION['email'] = $data['email'];
+    $_SESSION['status'] = "login";
+
+    // Jika Remember Me dicentang
+    if (isset($_POST['remember'])) {
+        setcookie("email", $email, time() + (86400 * 7), "/"); // simpan 7 hari
+    }
+
+    header("Location: dashboard.php");
+} else {
+    header("Location: login.php?wrong=true");
+}
+?>

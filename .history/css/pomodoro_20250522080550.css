@@ -1,0 +1,32 @@
+.container {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .timer {
+      font-size: 5rem;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .controls, .modes, .music {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    button {
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    .start { background-color: #00b894; color: white; }
+    .stop { background-color: #d63031; color: white; }
+    .mode-btn.active { background-color: #0984e3; color: white; }
+    select {
+      padding: 0.5rem;
+      border-radius: 8px;
+    }
+    audio { display: none; }

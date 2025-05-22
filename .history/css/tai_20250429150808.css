@@ -1,0 +1,51 @@
+.container {
+    animation: fadeIn 0.6s ease;
+}
+
+.premium-form {
+    background-color: var(--c9);
+    border: 2px solid var(--c2);
+    border-radius: 12px;
+}
+
+.btn-gradient {
+    background-color: var(--c7);
+    color: white;
+    border: none;
+    transition: 0.3s ease;
+    border-radius: 10px; 
+    padding: 10px;
+}
+
+.btn-gradient:hover {
+    transform: scale(1.02);
+    background-color: var(--c8);
+    color: var(--c0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+}
+
+.form-control-sm {
+    font-size: 14px; 
+    padding: 0.8rem 1rem; 
+    border: none;
+}
+
+
+
+
+            .form-label {
+    color: var(--c7);
+}
+
+.premium-table th {
+                     font-weight: 600;
+    background-color: var(--c9);
+    color: var(--c7);
+}
+
+.premium-table td {
+    vertical-align: middle;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size: 15px;
+}

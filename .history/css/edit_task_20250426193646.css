@@ -1,0 +1,27 @@
+
+
+body {
+    background: #f8f9fa;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.edit-form-container {
+    background: linear-gradient(to right, var(--bs-pink-200), var(--bs-pink-100));
+    padding: 30px;
+    border-radius: 1.5rem;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+.btn-gradient {
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+    color: white;
+    border: none;
+    transition: 0.3s ease;
+}
+.btn-gradient:hover {
+    background: linear-gradient(135deg, #f5576c, #f093fb);
+    transform: scale(1.03);
+}

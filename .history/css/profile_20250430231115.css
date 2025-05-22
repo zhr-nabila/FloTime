@@ -1,0 +1,202 @@
+:root {
+    --c0: #ffffff;
+    --c1: #E3919F;
+    --c2: #E7C0BC;
+    --c3: #370808;
+    --c4: #D97E8A;
+    --c5: #EC9FAB;
+    --c6: #000000;
+    /* gradient */
+    --c7: #850e35;
+    --c8: #ee6983;
+    --c9: #ffc4c4;
+    --c10: #fff5e4;
+    --c11: #d1d5db;
+}
+
+*:not(input):not(textarea):not([contenteditable="true"]) {
+    caret-color: transparent !important;
+}
+
+input,
+textarea,
+[contenteditable="true"] {
+    caret-color: auto;
+    outline: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: border 0.2s ease;
+}
+
+body {
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    overflow: hidden;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.container-fluid {
+    min-height: 100vh;
+}
+
+.content {
+    flex-grow: 1;
+    background: linear-gradient(135deg, var(--c9), var(--c10));
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    border: none;
+}
+
+.form-profile {
+    max-width: 300px;
+
+}
+
+/* .form-profile {
+    max-width: 550px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.75);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+} */
+
+.form-label {
+    font-weight: 600;
+    color: var(--c6);
+}
+
+.input-profile {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 12px 16px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--c6);
+    border-radius: 12px;
+    outline: none;
+    transition: 0.3s ease;
+    backdrop-filter: blur(10px);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.input-profile:focus {
+    background: rgba(255, 255, 255, 0.4);
+    border-color: var(--c7);
+    box-shadow: 0 0 0 0.2rem rgba(108, 99, 255, 0.15);
+    color: var(--c6);
+}
+
+/* .btn-primary {
+    background-color: var(--c7);
+    border: none;
+    color: var(--c0);
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 24px rgba(108, 99, 255, 0.25);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(to right, #574b90, #6c63ff);
+    box-shadow: 0 10px 30px rgba(108, 99, 255, 0.4);
+} */
+
+/* Form box */
+/* .form-profile {
+    max-width: 550px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 36px;
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+} */
+
+/* Avatar */
+.photo-user, .user-avatar-lg {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 3px solid var(--c0);
+}
+
+.user-avatar-lg {
+    background-color: var(--c7);
+    color: var(--c0);
+    font-size: 36px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Label */
+.form-label {
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 6px;
+}
+
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--c7), var(--c3));
+    border: none;
+    padding: 10px 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: 0.3s ease;
+    box-shadow: 0 5px 15px rgba(108, 99, 255, 0.3);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #574b90, #6c63ff);
+    box-shadow: 0 7px 20px rgba(108, 99, 255, 0.5);
+}
+
+.photo-user {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    border: 3px solid var(--c8);
+}
+
+.user-avatar-lg {
+    width: 100px;
+    height: 100px;
+    background-color: #6c63ff;
+    color: #fff;
+    font-size: 36px;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.form-check-label {
+    font-weight: 500;
+    color: #555;
+}

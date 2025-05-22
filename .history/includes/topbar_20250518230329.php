@@ -1,0 +1,103 @@
+<div class="header">
+    <div class="title"><?= isset($pageTitle) ? htmlspecialchars($pageTitle) : 'Untitled'; ?></div>
+    <div class="search-bar">
+        <form method="GET" action="todo.php" class="d-flex">
+            <input type="text" name="search" class="form-control" placeholder="Search task..." value="<?= isset($_GET['search']) ? htmlspecialchars($_GET['search']) : '' ?>">
+            <button type="submit" class="btn"><i class="bi bi-search"></i></button>
+        </form>
+    </div>
+
+    <?php
+include 'koneksi.php';
+session_start();
+$user_id = $_SESSION['user_id'];
+
+// Hitung notif yang belum dibaca
+$notif_count = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM notifications WHERE user_id = $user_id AND is_read = 0"));
+?>
+
+
+    <div class="notifications" id="notifWrapper" style="position: relative;">
+    <div style="position: relative;">
+        <i class="bi bi-bell" id="notifIcon"></i>
+        <span id="notifCount" class="notif-badge">0</span>
+
+        <div id="notifDropdown" class="notif-dropdown">
+            <div class="notif-header">Notifikasi</div>
+            <div id="notifList">
+                <div class="notif-item">Memuat notifikasi...</div>
+            </div>
+            <div class="notif-footer">
+                <a href="#" onclick="markAllRead()">Tandai semua telah dibaca</a>
+            </div>
+        </div>
+    </div>
+    <div class="date"><?= date('l, d F Y') ?></div>
+</div>
+
+
+
+</div>
+
+<script>
+  const notifIcon = document.getElementById("notifIcon");
+  const notifDropdown = document.getElementById("notifDropdown");
+  const notifCount = document.getElementById("notifCount");
+  const notifList = document.getElementById("notifList");
+
+  notifIcon.addEventListener("click", function () {
+    notifDropdown.style.display = notifDropdown.style.display === "block" ? "none" : "block";
+    loadNotifications();
+  });
+
+  function loadNotifications() {
+    fetch("load_notifications.php")
+      .then((res) => res.json())
+      .then((data) => {
+        notifList.innerHTML = "";
+
+        if (data.length === 0) {
+          notifList.innerHTML = '<div class="notif-item text-muted">Tidak ada notifikasi.</div>';
+          notifCount.style.display = "none";
+        } else {
+          notifCount.textContent = data.length;
+          notifCount.style.display = "inline-block";
+
+          data.forEach((notif) => {
+            const item = document.createElement("div");
+            item.className = "notif-item" + (notif.is_read == 0 ? " unread" : "");
+            item.textContent = notif.message;
+            notifList.appendChild(item);
+          });
+        }
+      });
+  }
+
+  function markAllRead() {
+    fetch("mark_read.php").then(() => {
+      notifCount.textContent = "0";
+      notifCount.style.display = "none";
+      notifList.innerHTML = '<div class="notif-item text-muted">Tidak ada notifikasi.</div>';
+      notifDropdown.style.display = "none";
+    });
+  }
+
+  // Close dropdown if clicked outside
+  window.addEventListener("click", function (e) {
+    if (!document.getElementById("notifWrapper").contains(e.target)) {
+      notifDropdown.style.display = "none";
+    }
+  });
+
+  // Load jumlah notifikasi saat awal
+  window.addEventListener("DOMContentLoaded", () => {
+    fetch("notif_count.php")
+      .then(res => res.json())
+      .then(data => {
+        if (data.count > 0) {
+          notifCount.textContent = data.count;
+          notifCount.style.display = "inline-block";
+        }
+      });
+  });
+</script>

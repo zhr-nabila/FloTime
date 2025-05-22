@@ -1,0 +1,41 @@
+:root {
+    --c0: #ffffff;
+    --c1: #E3919F;
+    --c2: #E7C0BC;
+    --c3: #370808;
+    --c4: #D97E8A;
+    --c5: #EC9FAB; 
+    --c6: #000000;
+    /* gradient */
+    --c7: #850e35;
+    --c8: #ee6983;
+    --c9: #ffc4c4;
+    --c10: #fff5e4;
+    --c11: #d1d5db;
+}
+
+body {
+    background: linear-gradient(45deg, var(--c10), var(--c1));
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.edit-form-container {
+    background: linear-gradient(to right, var(--bs-pink-200), var(--bs-pink-100));
+    padding: 30px;
+    border-radius: 1.5rem;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+.btn-gradient {
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+    color: white;
+    border: none;
+    transition: 0.3s ease;
+}
+.btn-gradient:hover {
+    background: linear-gradient(135deg, #f5576c, #f093fb);
+    transform: scale(1.03);
+}
